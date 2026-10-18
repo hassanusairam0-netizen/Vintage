@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>The Art of the Automobile</title>
+  <meta name="description" content="A scroll-driven film of a 1930 open tourer: its coachwork, its engine, and its reconstruction, piece by piece. Made by Usairam Hassan." />
+  <meta name="theme-color" content="#e9e3d8" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='15' fill='%23163a28'/%3E%3Ctext x='16' y='22' font-family='Georgia' font-size='17' text-anchor='middle' fill='%23e9d9b0'%3EH%3C/text%3E%3C/svg%3E" />
+</head>
+<body>
+  <div id="loader" role="status" aria-live="polite">
+    <div class="loader__inner">
+      <p class="loader__kicker">The Art of the Automobile</p>
+      <p class="loader__title">A study in timeless engineering</p>
+      <div class="loader__track"><i id="loader-bar"></i></div>
+      <p class="loader__meta"><span id="loader-msg">Preparing the studio</span><span><span id="loader-pct">00</span>%</span></p>
+      <p class="loader__credit">Made by Usairam Hassan</p>
+    </div>
+  </div>
+
+  <canvas id="gl" aria-label="Three-dimensional film of a 1930 open tourer" role="img"></canvas>
+  <svg id="leaders" aria-hidden="true"></svg>
+  <div id="labels" aria-hidden="true"></div>
+
+  <header class="masthead">
+    <a class="wordmark" href="#prologue" data-chapter="prologue">The Art of the Automobile</a>
+    <nav class="chapters" aria-label="Chapters">
+      <a data-chapter="exterior"><span>I</span>Exterior</a>
+      <a data-chapter="disassembly"><span>II</span>Disassembly</a>
+      <a data-chapter="engine"><span>III</span>Engine</a>
+      <a data-chapter="engineering"><span>IV</span>Engineering</a>
+      <a data-chapter="reconstruction"><span>V</span>Reconstruction</a>
+    </nav>
+    <p class="credit">Made by Usairam Hassan</p>
+  </header>
+  <div class="progress" aria-hidden="true"><i id="progress-bar"></i></div>
+
+  <div class="overlay">
+    <section id="hero" class="hero" aria-labelledby="hero-title">
+      <p class="hero__eyebrow"><span class="hero__line">The Art of Motion</span></p>
+      <h1 id="hero-title" class="hero__title">
+        <span class="hero__mask"><span class="hero__line">A study in</span></span>
+        <span class="hero__mask"><span class="hero__line"><em>timeless</em> engineering.</span></span>
+      </h1>
+      <dl class="hero__meta">
+        <div><dt>Coachwork</dt><dd>Open tourer, 1930</dd></div>
+        <div><dt>Engine</dt><dd>6½ litre straight six</dd></div>
+        <div><dt>Components</dt><dd>41, each one modelled</dd></div>
+      </dl>
+      <button id="scroll-cue" class="scroll-cue" type="button"><span class="scroll-cue__line"></span>Scroll to begin</button>
+    </section>
+
+    <div id="cards"></div>
+
+    <aside id="readout" class="readout" aria-live="off">
+      <p class="readout__label">Crank angle</p>
+      <p class="readout__value"><span id="crank-angle">000</span>°</p>
+      <p class="readout__label">Firing</p>
+      <p class="readout__value">Cyl <span id="firing">1</span></p>
+      <p class="readout__order">Order 1 · 5 · 3 · 6 · 2 · 4</p>
+    </aside>
+
+    <aside id="steps" class="steps" aria-label="Reconstruction sequence">
+      <p class="card__kicker"><span class="card__numeral">V</span>The Grand Reconstruction</p>
+      <h2 class="card__title">Piece by piece, it returns</h2>
+      <ol></ol>
+    </aside>
+
+    <section class="finale" aria-label="Finale">
+      <div id="finale-a" class="finale__a">
+        <p class="finale__line">Every component <br />has a purpose.</p>
+        <p class="finale__line">Every detail <br />tells a story.</p>
+      </div>
+      <div id="finale-b" class="finale__b">
+        <p class="finale__credit">Made by Usairam Hassan</p>
+        <button id="restart" class="restart" type="button">Return to the beginning</button>
+      </div>
+    </section>
+  </div>
+
+  <main id="scroll" aria-hidden="true"></main>
+
+  <div class="fallback">
+    <p class="hero__eyebrow">The Art of Motion</p>
+    <h1 class="hero__title">A study in timeless engineering.</h1>
+    <p>This film needs WebGL, which this browser has turned off or does not support. Try a recent version of Chrome, Safari, Firefox or Edge.</p>
+    <p class="finale__credit">Made by Usairam Hassan</p>
+  </div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
